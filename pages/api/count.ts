@@ -1,6 +1,6 @@
 import { NowRequest, NowResponse } from "@vercel/node";
 import admin from "firebase-admin";
-import { db } from "../utils/firebase";
+import { db } from "../../utils/firebase";
 
 export default async (request: NowRequest, response: NowResponse) => {
   if (request.method === "GET") return handleGET(request, response);
