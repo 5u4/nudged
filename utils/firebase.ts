@@ -1,0 +1,11 @@
+import admin from "firebase-admin";
+
+export const app = admin.initializeApp({
+  credential: admin.credential.cert({
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    privateKey: process.env.FIREBASE_PRIVATE_KEY,
+    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+  }),
+  databaseURL: process.env.DATABASE_URL,
+});
+export const db = app.firestore();

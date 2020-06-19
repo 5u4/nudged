@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "@vercel/node": "^1.7.1",
+    "firebase-admin": "^8.12.1",
     "vercel": "^19.1.1"
   }
 }
