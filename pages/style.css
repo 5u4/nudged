@@ -56,9 +56,9 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   background-color: #ffffff;
-  border: 1px solid rgba(22, 76, 167, 0.6);
+  border: 1px solid #8b751b;
   border-radius: 10px;
-  color: #1d89ff;
+  color: #b99b25;
   font-weight: 400;
   font-size: 16px;
   font-family: inherit;
@@ -76,7 +76,7 @@ button {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: #1d89ff;
+  background: #b99b25;
   content: "";
   opacity: 0;
   transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1),
@@ -95,4 +95,56 @@ button {
 }
 .btn-pill:hover:after {
   transform: translate(50%, 0) scale(1.1);
+}
+
+/* https://codepen.io/noeldelgado/pen/Bkzlu */
+.spinner {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+  border: 3px solid #b99b25;
+  border-radius: 50%;
+}
+.spinner:before,
+.spinner:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 3px;
+  background-color: #b99b25;
+  border-radius: 1.5px;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+.spinner:before {
+  height: 9px;
+  left: 13.5px;
+  top: 50%;
+  -webkit-animation: spin 2000ms linear infinite;
+  animation: spin 2000ms linear infinite;
+}
+.spinner:after {
+  height: 12px;
+  left: 13.5px;
+  top: 50%;
+  -webkit-animation: spin 500ms linear infinite;
+  animation: spin 500ms linear infinite;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

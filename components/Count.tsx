@@ -15,7 +15,7 @@ export const Count: React.FC = () => {
   }, [data]);
 
   if (error) return <div>Fail to load</div>;
-  if (!data) return <div>loading...</div>;
+  if (!data) return <div className="spinner" />;
 
   return (
     <>
