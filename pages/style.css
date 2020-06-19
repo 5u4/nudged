@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Raleway-VariableFont_wght";
+  src: url("/fonts/Raleway-VariableFont_wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Raleway-VariableFont_wght", sans-serif;
+}
+
+.bg-pattern {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #cccccc;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 50vh;
+}
+
+.count {
+  padding: 30px;
+  font-size: 64px;
+  color: #3b3b3b;
+}
+
+/* https://codepen.io/januaryofmine/pen/xBjqBg */
+button {
+  position: relative;
+  margin: 0;
+  height: 50px;
+  width: 130px;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+  border-radius: 10px;
+  color: #1d89ff;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+/* https://codepen.io/januaryofmine/pen/xBjqBg */
+.btn-pill:before,
+.btn-pill:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #1d89ff;
+  content: "";
+  opacity: 0;
+  transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1),
+    opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+  z-index: -1;
+  transform: translate(100%, -25%) translate3d(0, 0, 0);
+}
+.btn-pill:hover:before,
+.btn-pill:hover:after {
+  opacity: 0.15;
+  transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1),
+    opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+.btn-pill:hover:before {
+  transform: translate3d(50%, 0, 0) scale(0.9);
+}
+.btn-pill:hover:after {
+  transform: translate(50%, 0) scale(1.1);
+}

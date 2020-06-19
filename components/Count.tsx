@@ -17,11 +17,10 @@ export const Count: React.FC = () => {
 
   return (
     <>
-      <div>
-        Count:
-        <span>{data.count}</span>
-      </div>
-      <button onClick={increment}>Increment</button>
+      <span className="count">{data.count}</span>
+      <button className="btn-pill" onClick={increment}>
+        Increment
+      </button>
     </>
   );
 };
