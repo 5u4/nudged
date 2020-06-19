@@ -26,7 +26,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  height: 50vh;
+  height: 80vh;
 }
 
 .count {
@@ -35,10 +35,17 @@ body {
   color: #3b3b3b;
 }
 
+.timeago {
+  padding-bottom: 16px;
+  font-size: 18px;
+  color: #3b3b3b;
+}
+
 /* https://codepen.io/januaryofmine/pen/xBjqBg */
 button {
   position: relative;
   margin: 0;
+  padding: 5px 16px;
   height: 50px;
   width: 130px;
   outline: none;

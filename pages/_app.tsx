@@ -7,7 +7,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>Firebase Vercel Proxy</title>
+        <title>Nudge Nudge</title>
         <link href="https://unpkg.com/pattern.css" rel="stylesheet" />
       </Head>
       <Component {...pageProps} />

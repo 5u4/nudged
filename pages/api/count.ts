@@ -10,7 +10,8 @@ export default async (request: NowRequest, response: NowResponse) => {
 };
 
 const handleGET = async (_: NowRequest, response: NowResponse) => {
-  response.status(200).json((await db.doc("count/count").get()).data());
+  const count = await db.doc("count/count").get();
+  response.status(200).json({ ...count.data(), ts: count.updateTime.seconds });
 };
 
 const handlePOST = async (_: NowRequest, response: NowResponse) => {
